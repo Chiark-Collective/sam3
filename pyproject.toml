@@ -86,6 +86,12 @@ train = [
 where = ["."]
 include = ["sam3*"]
 
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.data-files]
+"assets" = ["assets/bpe_simple_vocab_16e6.txt.gz"]
+
 [tool.setuptools.dynamic]
 version = {attr = "sam3.__version__"}
 
